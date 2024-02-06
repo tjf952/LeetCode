@@ -8,7 +8,7 @@ from test import test
 
 
 def dutch_sort(nums: list) -> list:
-    """L75
+    """L75 (Medium)
 
     Args:
         nums (list): Array of integers with values 0, 1, and 2
