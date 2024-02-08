@@ -7,17 +7,20 @@ from test import test
 ### Functions ###
 
 
-def dutch_sort(nums: list) -> list:
-    """L
+def countBits(n: int) -> list:
+    """L338 (Easy)
 
     Args:
-        
+        n: An integer
 
     Returns:
-        
+        list: The number of 1's in the binary representation of 0 to n
     """
-    pass
+    sol = [0]
+    for x in range(1, n + 1):
+        sol.append(sol[x // 2] + x % 2)
+    return sol
 
 
 if __name__ == "__main__":
-    pass
+    test(countBits(5), [0, 1, 1, 2, 1, 2])

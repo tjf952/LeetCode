@@ -17,7 +17,7 @@ def two_sum(nums: list, target: int) -> list:
     Returns:
         list: Array of indices that add to sum
     """
-    
+
     indexes = {}
 
     for i in range(len(nums)):

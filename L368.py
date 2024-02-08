@@ -7,17 +7,31 @@ from test import test
 ### Functions ###
 
 
-def dutch_sort(nums: list) -> list:
-    """L
+def largestDivisibleSubset(nums: list) -> list:
+    """L368 (Medium)
 
     Args:
-        
+        nums (list): Set of distinct positive integers
 
     Returns:
-        
+        (list) Largest subset such that every pair of elements can be divisible
     """
-    pass
+    size, top = len(nums), 0
+    dp, pred, ans = [1] * size, [-1] * size, []
+    nums.sort()
+    for i in range(1, size):
+        for j in range(i):
+            if nums[i] % nums[j] == 0 and dp[i] < dp[j] + 1:
+                dp[i] = dp[j] + 1
+                pred[i] = j
+        if dp[i] > dp[top]:
+            top = i
+    while top >= 0:
+        ans.append(nums[top])
+        top = pred[top]
+    ans.sort()
+    return ans
 
 
 if __name__ == "__main__":
-    pass
+    test(largestDivisibleSubset([1, 2, 4, 8, 9]), [1, 2, 4, 8])

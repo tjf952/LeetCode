@@ -23,9 +23,9 @@ def isPalindrome(x: int) -> bool:
     st = []
 
     while x > 0:
-        st.append(x%10)
+        st.append(x % 10)
         x = x // 10
-    
+
     return st == st[::-1]
 
 

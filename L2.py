@@ -2,8 +2,7 @@
 
 ### Import Statements ###
 
-from test import success, fail
-
+from test import fail, success
 
 ### Classes ###
 

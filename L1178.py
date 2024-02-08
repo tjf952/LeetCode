@@ -10,15 +10,16 @@ from test import test
 def mask_str(self, s: str) -> int:
     mask = 0
     for c in s:
-        mask |= 1 << ord(c) - ord('a')
+        mask |= 1 << ord(c) - ord("a")
     return mask
+
 
 def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
     result = []
     bitmasks = Counter(self.mask_str(w) for w in words)
     for puzzle in puzzles:
         mask = self.mask_str(puzzle)
-        first = 1 << ord(puzzle[0]) - ord('a')
+        first = 1 << ord(puzzle[0]) - ord("a")
         submask = mask
         cnt = 0
         while submask:
