@@ -7,17 +7,17 @@ from test import test
 ### Functions ###
 
 
-def dutch_sort(nums: list) -> list:
-    """L
+def arrangeCoins(n: int) -> int:
+    """L441 (Easy)
 
     Args:
-
+        n (int): The number of coins
 
     Returns:
-
+        int: The number of complete rows in a staircase built with n coins
     """
-    pass
+    return int(-3 / 2 + ((5 / 4) + 2 * n) ** (1 / 2)) + 1
 
 
 if __name__ == "__main__":
-    pass
+    test(arrangeCoins(8), 3)

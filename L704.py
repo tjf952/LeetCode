@@ -8,7 +8,7 @@ from test import test
 
 
 def binary_search(nums: list, target: int) -> int:
-    """L704
+    """L704 (Easy)
 
     Args:
         nums (list): Array of intergers sorted in ascending order

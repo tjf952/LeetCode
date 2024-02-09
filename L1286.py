@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 
+### Import Statements ###
+
+from test import test
+
+### Classes ###
+
 
 class CombinationIterator:
+    """L1286 (Medium)"""
+
     def __init__(self, characters: str, combinationLength: int):
         """Initializes iterator class
 
@@ -31,3 +39,12 @@ class CombinationIterator:
     def hasNext(self) -> bool:
         """Returns true if and only if there exists a next combination"""
         return self.curr != self.chars[-self.size :]
+
+
+if __name__ == "__main__":
+    obj = CombinationIterator("abc", 2)
+    test(obj.next(), "ab")
+    test(obj.hasNext(), True)
+    test(obj.next(), "ac")
+    test(obj.next(), "bc")
+    test(obj.hasNext(), False)
