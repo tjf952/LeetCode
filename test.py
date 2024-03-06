@@ -32,8 +32,9 @@ def test(output, expected) -> bool:
     Returns:
         bool: Pass or fail based on assertion
     """
+    print(f"[+] Testing {output} vs correct answer {expected}...")
     if output == expected:
-        success(f"[+] Output {output} is correct.")
+        success(f"  [+] Output {output} is correct.")
         return True
-    fail(f"[!] Incorrect!\n    Output: {output}\n  Expected: {expected}")
+    fail(f"  [!] Incorrect!\n\tOutput: {output}\n\tExpected: {expected}")
     return False
