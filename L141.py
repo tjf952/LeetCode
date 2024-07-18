@@ -21,15 +21,15 @@ def has_cycle(head: ListNode) -> bool:
     if not head:
         return False
     while head.next:
-        if head.val == '-':
+        if head.val == "-":
             return True
-        head.val = '-'
+        head.val = "-"
         head = head.next
     return False
 
 
 if __name__ == "__main__":
-    ll = create_ll([1,2,3,4,5])
+    ll = create_ll([1, 2, 3, 4, 5])
     tail = ll.next.next.next.next
-    tail.next = ll # 5 points to 1 for cycle
+    tail.next = ll  # 5 points to 1 for cycle
     test(has_cycle(ll), True)

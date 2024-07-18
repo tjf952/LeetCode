@@ -67,13 +67,12 @@ def reorder_routes_faster(n: int, connections: list) -> int:
     return change
 
 
-
 if __name__ == "__main__":
     # 5 <- 4 -> 0 -> 1 -> 3 <- 2
     n = 6
-    connections = [[0,1],[1,3],[2,3],[4,0],[4,5]]
+    connections = [[0, 1], [1, 3], [2, 3], [4, 0], [4, 5]]
     test(reorder_routes_faster(n, connections), 3)
     # 0 <- 1 -> 2 <- 3 -> 4
     n = 5
-    connections = [[1,0],[1,2],[3,2],[3,4]]
+    connections = [[1, 0], [1, 2], [3, 2], [3, 4]]
     test(reorder_routes_faster(n, connections), 2)
